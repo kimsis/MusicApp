@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#000000"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/albums_button"
+            style="@style/Toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/album"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/albums"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:id="@+id/albums_clicked"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/songs_button"
+            style="@style/Toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/songs"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/songs"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:id="@+id/songs_clicked"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#0060ff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/artists_button"
+            style="@style/Toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/artist"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/artists"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:id="@+id/artists_clicked"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#000000" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/songs_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/albums_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:padding="8dp"
+        android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/artists_grid_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center"
+        android:horizontalSpacing="8dp"
+        android:numColumns="auto_fit"
+        android:padding="8dp"
+        android:verticalSpacing="8dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Music app</string>
+
+    <string name="artists">Artists</string>
+    <string name="albums">Albums</string>
+    <string name="songs">Songs</string>
+    <string name="title_activity_artist">ArtistActivity</string>
+    <string name="error">ERROR</string>
+
+    <string-array name="settings_array">
+        <item>    </item>
+        <item>Some</item>
+        <item>Random</item>
+        <item>Settings</item>
+        <item>To be</item>
+        <item>Reviewed</item>
+    </string-array>
+
+</resources>

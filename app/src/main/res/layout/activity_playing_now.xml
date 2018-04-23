@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".PlayingNowActivity">
+
+    <RelativeLayout
+        android:id="@+id/playing_now_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/playing_now_activity_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <Spinner
+            android:id="@+id/playing_now_activity_settings_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/settings" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/playing_now_activity_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/song_artist_name"
+        android:layout_below="@+id/playing_now_activity_toolbar"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/fall_out_boy_american_beauty_american_psycho" />
+
+    <TextView
+        android:id="@+id/song_artist_name"
+        style="@style/Playing_now_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/song_album_title"
+        android:drawableLeft="@drawable/artist"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/artist"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:singleLine="true"
+        tools:text="The Song Artist" />
+
+    <TextView
+        android:id="@+id/song_album_title"
+        style="@style/Playing_now_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/song_name"
+        android:drawableLeft="@drawable/album"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/album"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:singleLine="true"
+        tools:text="The Album" />
+
+    <TextView
+        android:id="@+id/song_name"
+        style="@style/Playing_now_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/action_bar_view"
+        android:drawableLeft="@drawable/songs"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/songs"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:singleLine="true"
+        tools:text="The Song Name" />
+
+    <LinearLayout
+        android:id="@+id/action_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:src="@drawable/previous"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:src="@drawable/play"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:src="@drawable/next"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:progress="25" />
+
+    </LinearLayout>
+
+</RelativeLayout>

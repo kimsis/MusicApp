@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".AlbumActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/album_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/album_activity_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/back"
+                tools:ignore="ContentDescription" />
+
+            <Spinner
+                android:id="@+id/album_activity_settings_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/settings" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/album_activity_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/album_activity_toolbar"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            tools:text="Some Album's Name" />
+
+        <ImageView
+            android:id="@+id/album_activity_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/album_activity_name"
+            tools:ignore="ContentDescription"
+            tools:srcCompat="@drawable/fall_out_boy_american_beauty_american_psycho" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/album_activity_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp" />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/album_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:src="@drawable/fall_out_boy_save_rock_and_roll" />
+
+    <TextView
+        android:id="@+id/album_title"
+        style="@style/Album_Item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/album_image"
+        android:layout_toLeftOf="@id/play_button"
+        android:layout_toRightOf="@id/album_image"
+        android:layout_toStartOf="@id/play_button"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="24sp"
+        tools:text="Some Album Title" />
+
+    <TextView
+        android:id="@+id/artist_name"
+        style="@style/Album_Item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/album_title"
+        android:layout_toEndOf="@id/album_image"
+        android:layout_toLeftOf="@id/play_button"
+        android:layout_toRightOf="@id/album_image"
+        android:layout_toStartOf="@id/play_button"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="20sp"
+        tools:text="Some Artist Name" />
+
+    <ImageView
+        android:id="@+id/play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/play_button" />
+</RelativeLayout>
